@@ -1,0 +1,33 @@
+.header {
+  position: fixed;
+  z-index: 501;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  background: rgb(10, 20, 110);
+  backdrop-filter: saturate(180%) blur(20px);
+}
+
+.headerContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+.headerContainer {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.mainLogo,
+.link {
+  color: #FFFFFF;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.link {
+  font-size: 16px;
+}
