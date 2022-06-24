@@ -1,3 +1,18 @@
-.container {
-  background-color: blueviolet;
+.exchangeRates {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 150px;
+}
+
+.boxContainer {
+  max-width: 80vw;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid aqua;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgb(35 55 80 / 30%) 0px 6px 12px;
 }

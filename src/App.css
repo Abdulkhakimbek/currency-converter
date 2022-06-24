@@ -5,6 +5,7 @@ body {
   align-items: center;
   min-height: 100vh;
   text-align: center;
+  font-family: sans-serif;
 }
 
 h1 {
@@ -16,7 +17,5 @@ a {
   text-decoration: none;
 }
 
-select {
-  margin-left: 1rem;
-}
+
 

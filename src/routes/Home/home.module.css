@@ -2,7 +2,7 @@
  display: flex;
  justify-content: center;
  align-items: center;
- margin-bottom: 100px;
+ margin-bottom: 150px;
 }
 
 .boxContainer {
@@ -12,21 +12,11 @@
   flex-direction: column;
   border: 1px solid aqua;
   padding: 10px;
+  border-radius: 8px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgb(35 55 80 / 30%) 0px 6px 12px;
 }
 
 .top {
   text-align: center;
-}
-
-.content {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 20px;
-  padding: 40px;
-}
-
-.equals {
-  font-weight: bold;
-  font-size: 2rem;
 }

@@ -1,0 +1,19 @@
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  padding: 40px;
+}
+
+.contentItemRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.equals {
+  font-weight: bold;
+  font-size: 2rem;
+  margin-top: 20px;
+}
