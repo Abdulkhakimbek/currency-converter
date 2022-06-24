@@ -5,7 +5,7 @@ import './App.css';
 
 import Layout from './components/Layout';
 import Home from "./routes/Home"
-import CurrentExchangeRates from './routes/CurrentExchangeRates';
+import CurrentExchangeRates from './routes/ExchangeRates';
 
 // const Layout = lazy(() => import('./components/Layout'))
 // const Home = lazy(() => import('./routes/Home'));

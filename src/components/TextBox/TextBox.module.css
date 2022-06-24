@@ -4,6 +4,7 @@
   justify-content: space-between;
   flex-direction: row;
   gap: 30px;
+  padding: 50px;
 }
 
 .inputHolder {
@@ -33,3 +34,19 @@
   border-radius: 8px;
   font-size: 16px;
 }
+
+.convertBtn {
+  border: none;
+  border-radius: 5px;
+  padding: 5px 8px;
+  background-color: rgb(70, 187, 187);
+  color: aliceblue;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.convertBtn:hover {
+  background-color: rgb(70, 167, 167);
+}
+

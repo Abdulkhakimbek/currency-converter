@@ -29,7 +29,15 @@ const CurrencyData = () => {
     }
   }, [fromCurrency, toCurrency])
 
-  const values = { currencyData, currencyOptions, fromCurrency, toCurrency, exchangeRate, setFromCurrency, setToCurrency }
+  const values = {
+    currencyData,
+    currencyOptions,
+    fromCurrency,
+    toCurrency,
+    exchangeRate,
+    setFromCurrency,
+    setToCurrency
+  }
 
   return values;
 }

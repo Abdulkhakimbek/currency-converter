@@ -4,10 +4,6 @@ import styles from "./TextBox.module.css"
 
 const TextBox = () => {
   const {
-    currencyData,
-    currencyOptions,
-    fromCurrency,
-    toCurrency,
     exchangeRate,
     setFromCurrency,
     setToCurrency
@@ -18,35 +14,34 @@ const TextBox = () => {
   const [error, setError] = useState("ERROR")
 
   const handleButtonClick = () => {
+
     console.log(inputdata)
     let inputArrData = inputdata.split(" ")
 
-    if (inputArrData.length === 4) {
-      console.log("ready")
-      console.log(inputArrData[0])
+    if (inputArrData.length == 4) {
       setAmount(inputArrData[0])
-      console.log("ready Amount:", amount)
       setFromCurrency(inputArrData[1])
       setToCurrency(inputArrData[3])
-      console.log("Ready Exchange rate:", exchangeRate)
       setToAmount(amount * exchangeRate)
-      console.log("Ready toAmount:", toAmount)
+      console.log(amount)
+      console.log(inputArrData[0])
+      console.log(exchangeRate)
+      console.log(toAmount)
     } else {
       setError("Incorrect input format")
     }
   }
 
+
   return (
     <div className={styles.container}>
       <div className={styles.inputHolder}>
-        <label className={styles.label}></label>
+        <label className={styles.label}>Format: 15 USD in UAH</label>
         <input type="text" className={styles.input} onChange={(e) => setInputData(e.target.value)} />
       </div>
-
-      <button onClick={() => handleButtonClick()}>
+      <button className={styles.convertBtn} onClick={() => handleButtonClick()}>
         Convert
       </button>
-
       <div className={styles.result}>
         <label className={styles.label}>Result</label>
         <div className={styles.input}>{isNaN(toAmount) ? error : toAmount}</div>
