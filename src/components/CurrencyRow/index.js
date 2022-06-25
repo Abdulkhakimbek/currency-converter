@@ -11,6 +11,7 @@ export default function CurrencyRow(props) {
     inputLabel,
     selectLabel
   } = props
+
   return (
     <div className={styles.container}>
       <div className={styles.inputHolder}>

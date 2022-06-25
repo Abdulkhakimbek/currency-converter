@@ -8,7 +8,7 @@ const TextBox = () => {
     setFromCurrency,
     setToCurrency
   } = CurrencyData();
-  const [inputdata, setInputData] = useState()
+  const [inputdata, setInputData] = useState([])
   const [amount, setAmount] = useState()
   const [toAmount, setToAmount] = useState(0)
   const [error, setError] = useState("ERROR")

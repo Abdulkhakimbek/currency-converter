@@ -3,8 +3,8 @@ import React, { useEffect, useState } from 'react'
 
 const BaseCurrency = (chosenCurrency) => {
 
-  const [customData, setCustomData] = useState({})
-
+  const [customData, setCustomData] = useState()
+  console.log("chosenCurrency:", chosenCurrency)
   const URL = process.env.REACT_APP_API_KEY + `&base=${chosenCurrency}`;
 
   useEffect(() => {
@@ -15,7 +15,9 @@ const BaseCurrency = (chosenCurrency) => {
       })
   }, [chosenCurrency])
 
-  return customData;
+
+
+  return { customData };
 }
 
 export default BaseCurrency

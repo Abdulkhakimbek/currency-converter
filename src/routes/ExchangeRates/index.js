@@ -1,8 +1,11 @@
 import React from 'react'
 import CurrencyData from '../../components/CalculateCurrency'
+import BaseCurrency from '../../components/BaseCurrency'
 import styles from './ExchangeRates.module.css'
 
 const CurrentExchangeRates = () => {
+  const { customData, } = BaseCurrency()
+  console.log("Custom data: ", customData)
   const {
     currencyData,
   } = CurrencyData();
@@ -10,7 +13,7 @@ const CurrentExchangeRates = () => {
   let arrCurrencyData = []
 
   for (const [k, v] of Object.entries(currencyData)) {
-    arrCurrencyData.push(<div>{`${k} : ${v}`}</div>)
+    arrCurrencyData.push(<div key={k}>{`${k} : ${v}`}</div>)
   }
 
   return (
