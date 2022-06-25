@@ -1,13 +1,9 @@
 import React from 'react'
 import Converter from '../../components/Converter';
 import TextBox from '../../components/TextBox';
-
 import styles from './home.module.css'
 
-
-
 const Home = () => {
-
 
   return (
     <>
@@ -17,6 +13,7 @@ const Home = () => {
           <Converter />
           <div className={styles.top}><h1>Text Box</h1></div>
           <TextBox />
+          <div className={styles.top}><h1>Set The Base Currency for the next page</h1></div>
         </div>
       </div>
     </>

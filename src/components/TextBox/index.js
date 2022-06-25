@@ -14,8 +14,6 @@ const TextBox = () => {
   const [error, setError] = useState("ERROR")
 
   const handleButtonClick = () => {
-
-    console.log(inputdata)
     let inputArrData = inputdata.split(" ")
 
     if (inputArrData.length == 4) {
@@ -23,10 +21,6 @@ const TextBox = () => {
       setFromCurrency(inputArrData[1])
       setToCurrency(inputArrData[3])
       setToAmount(amount * exchangeRate)
-      console.log(amount)
-      console.log(inputArrData[0])
-      console.log(exchangeRate)
-      console.log(toAmount)
     } else {
       setError("Incorrect input format")
     }
@@ -38,6 +32,10 @@ const TextBox = () => {
       <div className={styles.inputHolder}>
         <label className={styles.label}>Format: 15 USD in UAH</label>
         <input type="text" className={styles.input} onChange={(e) => setInputData(e.target.value)} />
+      </div>
+      <div>
+        <label className={styles.label}>Check the type</label>
+        <input type="checkbox" on onClick={() => handleButtonClick()} />
       </div>
       <button className={styles.convertBtn} onClick={() => handleButtonClick()}>
         Convert

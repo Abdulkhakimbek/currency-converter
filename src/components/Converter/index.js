@@ -10,50 +10,34 @@ const Converter = () => {
     fromCurrency,
     toCurrency,
     exchangeRate,
+    fromAmount,
+    toAmount,
     setFromCurrency,
-    setToCurrency
+    setToCurrency,
+    handleFromAmountChange,
+    handleToAmountChange
   } = CurrencyData();
 
-  const [amount, setAmount] = useState(1)
-  const [amountInFromCurrency, setAmountInFromCurrency] = useState(true)
 
-  let toAmount, fromAmount
-  if (amountInFromCurrency) {
-    fromAmount = amount
-    toAmount = amount * exchangeRate
-  } else {
-    toAmount = amount
-    fromAmount = amount / exchangeRate
-  }
-
-  function handleFromAmountChange(e) {
-    setAmount(e.target.value)
-    setAmountInFromCurrency(true)
-  }
-
-  function handleToAmountChange(e) {
-    setAmount(e.target.value)
-    setAmountInFromCurrency(false)
-  }
 
   return (
     <>
       <div className={styles.content}>
-        <div>
-          <CurrencyRow
-            inputLabel={"Amount"}
-            selectLabel={"From"}
-            currencyOptions={currencyOptions}
-            selectedCurrency={fromCurrency}
-            onChangeCurrency={e => setFromCurrency(e.target.value)}
-            onChangeAmount={handleFromAmountChange}
-            amount={fromAmount}
-          />
-        </div>
+        <CurrencyRow
+          inputLabel={"Amount"}
+          selectLabel={"From"}
+          name='CurrencyAmount'
+          currencyOptions={currencyOptions}
+          selectedCurrency={fromCurrency}
+          onChangeCurrency={e => setFromCurrency(e.target.value)}
+          onChangeAmount={handleFromAmountChange}
+          amount={fromAmount}
+        />
         <div className={styles.equals}>=</div>
         <CurrencyRow
           inputLabel={"Converted Amount"}
           selectLabel={"To"}
+          name='CurrencyAmount'
           currencyOptions={currencyOptions}
           selectedCurrency={toCurrency}
           onChangeCurrency={e => setToCurrency(e.target.value)}

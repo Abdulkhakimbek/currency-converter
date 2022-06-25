@@ -1,18 +1,42 @@
 .exchangeRates {
   display: flex;
-  align-items: center;
   justify-content: center;
-  margin-bottom: 150px;
+  align-items: center;
+  margin-top: 100px;
+ }
+ 
+ .boxContainer {
+   max-width: 80vw;
+   background-color: #FFFFFF;
+   display: flex;
+   flex-direction: column;
+   border: 1px solid aqua;
+   padding: 10px;
+   border-radius: 8px;
+   background-color: rgb(255, 255, 255);
+   box-shadow: rgb(35 55 80 / 30%) 0px 6px 12px;
+ }
+ 
+ .top {
+   text-align: center;
+ }
+
+ .content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  padding: 40px;
+}
+ 
+ .equals {
+  font-weight: bold;
+  font-size: 2rem;
 }
 
-.boxContainer {
-  max-width: 80vw;
-  background-color: #FFFFFF;
+.notes {
   display: flex;
-  flex-direction: column;
-  border: 1px solid aqua;
-  padding: 10px;
-  border-radius: 8px;
-  background-color: rgb(255, 255, 255);
-  box-shadow: rgb(35 55 80 / 30%) 0px 6px 12px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 50px;
 }

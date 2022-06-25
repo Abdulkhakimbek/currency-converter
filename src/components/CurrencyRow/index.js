@@ -15,7 +15,7 @@ export default function CurrencyRow(props) {
     <div className={styles.container}>
       <div className={styles.inputHolder}>
         <label className={styles.label}>{inputLabel}</label>
-        <input type="number" className={styles.input} value={amount ? amount : ""} onChange={onChangeAmount} />
+        <input name='CurrencyAmount' type="number" className={styles.input} value={amount ? amount : ""} onChange={onChangeAmount} />
       </div>
       <div className={styles.inputHolder}>
         <label className={styles.label}>{selectLabel}</label>
