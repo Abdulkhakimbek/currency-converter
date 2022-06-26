@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react'
 
-
 const BaseCurrency = (chosenCurrency) => {
-
+  console.log("ChosenCurrency BasePage: ", chosenCurrency)
   const [customData, setCustomData] = useState()
-  console.log("chosenCurrency:", chosenCurrency)
   const URL = process.env.REACT_APP_API_KEY + `&base=${chosenCurrency}`;
+
 
   useEffect(() => {
     fetch(URL)
@@ -14,8 +13,6 @@ const BaseCurrency = (chosenCurrency) => {
         setCustomData(data.rates)
       })
   }, [chosenCurrency])
-
-
 
   return { customData };
 }
