@@ -7,7 +7,7 @@ import { selectCurrency } from '../../features/currency/currencySlice'
 
 const CurrentExchangeRates = () => {
   const chosenCurrency = useSelector(selectCurrency)
-  const { customData, } = BaseCurrency(chosenCurrency)
+  console.log("ChosenCurrency CurrentExchangeRates: ", chosenCurrency)
   const {
     currencyData,
   } = CurrencyData();

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
 const BaseCurrency = (chosenCurrency) => {
-  console.log("ChosenCurrency BasePage: ", chosenCurrency)
+
   const [customData, setCustomData] = useState()
   const URL = process.env.REACT_APP_API_KEY + `&base=${chosenCurrency}`;
 
